@@ -246,4 +246,47 @@ footer .social img {
     #hero {
         margin-top: 0;
     }
-    #hero
+}
+    .FAQ-grid{
+        display: grid;
+        grid-template-columns: auto;
+        font-family: "IM Fell French Canon SC";
+        margin: auto;
+    } 
+
+    .FAQ-list{
+        grid-column: 1/2;
+        width: 220px;
+        border-style: solid;
+        font-size: medium;
+        height: 400px;
+        background-color: #1276bd;
+    }
+    
+    .FAQ-list ul{
+        padding-left: 20px;
+    }
+    .FAQ-list li{
+        padding-bottom: 10px;
+        padding-right: 10px;
+    }
+    .FAQ-list a{
+        color: #FFFFFF;
+    }
+    .FAQ-list h2{
+        padding-top: 20px;
+    }
+    .answers{
+        grid-column: 2/3;
+        width: auto;
+        margin: 10px;
+    }
+    
+    .answers img{
+        float: right;
+        margin-right: 10px;
+    }
+    
+    .answers p{
+        text-align: left;
+    }
