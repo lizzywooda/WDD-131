@@ -175,3 +175,11 @@ nav a:hover {
   border-top: 1px solid;
   border-right: 1px solid;
 }
+
+/* Add a CSS rule for the .content-image class */
+.content-image {
+  max-width: 100%;
+  height: auto; /* Ensures aspect ratio is maintained */
+  display: block; /* Ensures the image behaves as a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+}
