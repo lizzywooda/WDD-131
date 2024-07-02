@@ -1,3 +1,52 @@
+/* Reset default margins and paddings */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+  grid-gap: 20px; /* Gap between grid items */
+  background-color: #373F51; /* Background color for the grid container */
+  padding: 20px; /* Padding around the grid container */
+}
+
+/* Set the overall background color for the website */
+body {
+  background-color: #373F51;
+  color: #D0CD94; /* Default text color */
+  font-family: Arial, sans-serif; /* Example font */
+}
+
+/* Add a CSS rule for the information class */
+.information {
+    background-color: #646F4B;
+    color: #FFFFFF; /* Default text color */
+    font-family: Arial, sans-serif; /* Example font */
+    padding: 20px; /* Padding around the information class */
+    border-radius: 10px; /* Rounded corners */
+    text-align: left;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Add a CSS rule for the popular post class */
+.popular-post {
+    background-color: #646F4B;
+    color: #FFFFFF; /* Default text color */
+    font-family: Arial, sans-serif; /* Example font */
+    padding: 20px; /* Padding around the popular post class */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* Add a CSS rule for the .content-image class */
 .content-image {
     max-width: 100%;
