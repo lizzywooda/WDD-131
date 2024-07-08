@@ -1,57 +1,204 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Reset default margins and paddings */
-body, h1, h2, h3, p {
+body,
+h1,
+h2,
+h3,
+p {
   margin: 0;
   padding: 0;
+}
+
+header,
+nav,
+main,
+footer {
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  background: #646f4b;
+  max-height: 10em;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav a {
+  color: white;
+  font-size: xx-large;
+  text-decoration: none;
+  padding: 10px;
+  margin-left: 1em;
+  margin-right: 1em;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--nav-link-hover-bg-color);
+  color: var(--nav-link-hover-color);
+}
+
+/* Define CSS variables */
+:root {
+  --heading-font: "Bebas Neue", sans-serif;
+  --paragraph-font: "Montserrat", sans-serif;
+  --background-color: #373f51;
+  --nav-bar-color: #646f4b;
+  --nav-link-hover-bg-color: #373f51;
+  --nav-link-hover-color: #d0cd94;
+}
+
+/* Set the overall background color for the website */
+body {
+  background-color: var(--background-color);
+  color: #d0cd94; /* Default text color */
+  font-family: var(--paragraph-font); /* Use Montserrat for paragraphs */
+}
+
+/* Navbar styles */
+.nav-bar {
+  background-color: var(--nav-bar-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-bar .logo {
+  font-family: var(--heading-font); /* Use Bebas Neue for headings */
+  font-size: 1.5rem;
+  color: white;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar li {
+  margin-left: 1rem;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-bar a:hover {
+  background-color: var(--nav-link-hover-bg-color);
+  color: var(--nav-link-hover-color);
+}
+
+/* Main content styles */
+main h1 {
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+main p {
+  font-family: var(--paragraph-font);
+  font-size: 1rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-family: var(--paragraph-font);
 }
 
 /* Style for the grid container */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+  grid-template-columns: 25% 75%; /* Two columns */
+  grid-template-rows: 1fr 1fr 200px; /* One row */
   grid-gap: 20px; /* Gap between grid items */
-  background-color: #373F51; /* Background color for the grid container */
+  background-color: var(
+    --background-color
+  ); /* Background color for the grid container */
   padding: 20px; /* Padding around the grid container */
-}
-
-/* Set the overall background color for the website */
-body {
-  background-color: #373F51;
-  color: #D0CD94; /* Default text color */
-  font-family: Arial, sans-serif; /* Example font */
 }
 
 /* Add a CSS rule for the information class */
 .information {
-    background-color: #646F4B;
-    color: #FFFFFF; /* Default text color */
-    font-family: Arial, sans-serif; /* Example font */
-    padding: 20px; /* Padding around the information class */
-    border-radius: 10px; /* Rounded corners */
-    text-align: left;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background-color: var(--nav-bar-color);
+  color: #ffffff; /* Default text color */
+  font-family: var(--paragraph-font);
+  font-size: larger;
+  padding: 20px; /* Padding around the information class */
+  border-radius: 10px; /* Rounded corners */
+  text-align: left;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 450px;
+  max-width: 250px;
+  grid-column: 1 / 2;
+  align-items: center;
+}
+
+/* Handbook update styles */
+.handbook-update {
+  background-color: var(--nav-bar-color);
+  color: #ffffff;
+  font-family: var(--paragraph-font);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  grid-column: 2 / 3;
+  align-items: center;
+  padding: 15px;
 }
 
 /* Add a CSS rule for the popular post class */
 .popular-post {
-    background-color: #646F4B;
-    color: #FFFFFF; /* Default text color */
-    font-family: Arial, sans-serif; /* Example font */
-    padding: 20px; /* Padding around the popular post class */
-    border-radius: 10px; /* Rounded corners */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background-color: var(--nav-bar-color);
+  color: #ffffff; /* Default text color */
+  font-family: var(--paragraph-font);
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: 2 / 3; /* Place in the first column */
+}
+
+.event{
+  color: #d0cd94; /* Default text color */
+  font-family: var(--paragraph-font);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: 2 / 3; /* Place in the first column */
 }
 
 /* Add a CSS rule for the .content-image class */
 .content-image {
-    max-width: 100%;
-    height: auto; /* Ensures aspect ratio is maintained */
-    display: block; /* Ensures the image behaves as a block element */
-    margin: 0 auto; /* Centers the image horizontally */
-  }
-  
+  max-width: 100%;
+  height: auto; /* Ensures aspect ratio is maintained */
+  display: block; /* Ensures the image behaves as a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
