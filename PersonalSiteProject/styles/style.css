@@ -59,6 +59,14 @@ nav a:hover {
   --nav-link-hover-color: #d0cd94;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+}
+
+a {
+  font-family: var(--heading-font);
+}
+
 /* Set the overall background color for the website */
 body {
   background-color: var(--background-color);
@@ -114,7 +122,7 @@ main h1 {
 main p {
   font-family: var(--paragraph-font);
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   padding: 0 1rem;
 }
 
@@ -126,7 +134,7 @@ footer {
 }
 
 /* Style for the grid container */
-.grid-container {
+.home-grid-container {
   display: grid;
   grid-template-columns: 25% 75%; /* Two columns */
   grid-template-rows: 1fr 1fr 200px; /* One row */
@@ -202,3 +210,42 @@ footer {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
+
+/* Survivor's handbook */
+
+/* Style for the grid container */
+.handbook-grid-container {
+  display: grid;
+  grid-template-columns: 20% 60% 20%; /* Three columns */
+  grid-template-rows: 1fr 1fr 1fr 200px; /* three row */
+  grid-gap: 20px; /* Gap between grid items */
+  background-color: var(
+    --background-color
+  ); /* Background color for the grid container */
+  padding: 20px; /* Padding around the grid container */
+}
+
+.handbook-title {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.handbook-intro {
+  background-color: var(--nav-bar-color);
+  color: #ffffff; /* Default text color */
+  font-family: var(--paragraph-font);
+  font-size: larger;
+  padding: 20px; /* Padding around the information class */
+  border-radius: 10px; /* Rounded corners */
+  text-align: left;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 300px;
+  max-width: 200px;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  align-items: center;
+}
+
