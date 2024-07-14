@@ -18,8 +18,8 @@
     </header>
     <main class="HandbookPage">
         <div class="handbook-grid-container">
-        <div class="handbook logo">
-            <img src="images/SurvivorsHandbook_Logo.png" alt="SurvivorsHandbook Logo">
+        <div class="handbook-logo">
+            <img src="images/SurvivorsHandbook_Logo.png" alt="SurvivorsHandbook-Logo">
         </div>
         <div class="item-reference">
            
@@ -27,26 +27,65 @@
         <div class="handbook-title">
             <h1>Survivor's Handbook</h1>
         </div>
-        <div class="first aid">
-            <img src="images/first-aid-kit-free-vector.jpg" alt="first aid">
-        </div>
         <div class="handbook-intro">
-      <p>The Survivor’s handbook is a catalogued and curated compilation of knowledge and skills. It contains a variety of subjects and is filled with open source and shared knowledge and experience just for you!
+            <p>The Survivor’s handbook is a catalogued and curated compilation of knowledge and skills. It contains a variety of subjects and is filled with open source and shared knowledge and experience just for you!
         </div>
-        <div>
-            <h4>Crash Course on First Aid:</h4>
-      <p>Accidents are going to happen. You can’t spend your life worrying about them or you’d never get anything done. However, using common sense and taking a few simple precautions is well worth a little of your time. Really, everyone should have a basic knowledge of first aid. If you were injured, you’d want someone close to you who doesn’t panic and knows what to do. It’s not being dramatic to say a little knowledge can make the difference between life and death.</p>
-      <p>When dealing with more than one casualty, a decision has to be made about which person to treat first. This process is called “triage.” One rule of thumb is that if someone is screaming, they are clearly alive, conscious and almost certainly in less danger than someone silent and still.</p>
-      <p>These are your priorities:</p>
-      <ul>
-        <li>Breathing and heartbeat.</li>
-        <li>Stop bleeding.</li>
-        <li>Bandage wounds.</li>
-        <li>Splint fractures.</li>
-        <li>Treat shock.</li>
-      </ul>
-      <p>-Excerpt from The Dangerous Book for Boys</p>
-        </div>
+        
+        
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'FirstAid')">First Aid</button>
+            <button class="tablinks" onclick="openTab(event, 'StartingFire')">Starting a Fire</button>
+            <button class="tablinks" onclick="openTab(event, 'FlintNapping')">Flint Napping</button>
+          </div>
+          
+          <div id="FirstAid" class="tabcontent">
+            
+            <h3>First Aid</h3>
+            <div class="firstaid">
+                <img src="images/first-aid-kit-free-vector.jpg" alt="first aid">
+            </div>
+            <p>  <h4>Crash Course on First Aid:</h4>
+                <p>Accidents are going to happen. You can’t spend your life worrying about them or you’d never get anything done. However, using common sense and taking a few simple precautions is well worth a little of your time. Really, everyone should have a basic knowledge of first aid. If you were injured, you’d want someone close to you who doesn’t panic and knows what to do. It’s not being dramatic to say a little knowledge can make the difference between life and death.</p>
+                <p>When dealing with more than one casualty, a decision has to be made about which person to treat first. This process is called “triage.” One rule of thumb is that if someone is screaming, they are clearly alive, conscious and almost certainly in less danger than someone silent and still.</p>
+                <p>These are your priorities:</p>
+                <ul>
+                  <li>Breathing and heartbeat.</li>
+                  <li>Stop bleeding.</li>
+                  <li>Bandage wounds.</li>
+                  <li>Splint fractures.</li>
+                  <li>Treat shock.</li>
+                </ul>
+                <p>-Excerpt from The Dangerous Book for Boys</p>
+                  </p>
+          </div>
+          
+          <div id="StartingFire" class="tabcontent">
+            <h3>Starting a Fire</h3>
+            <p>Techniques and methods for starting a fire in the wild.</p>
+          </div>
+          
+          <div id="FlintNapping" class="tabcontent">
+            <h3>Flint Napping</h3>
+            <p>The art of shaping flint for tools and weapons.</p>
+          </div>
+          
+          <script>
+          function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+          </script>
+
     </main>
     <footer>
         <h3>EmergencyPrep &copy; 2024 - Luke Canepari</h3>
